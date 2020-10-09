@@ -62,3 +62,8 @@ Input: nums = [1, 2, 3, 1, 1, 3]
 Output: 4
 Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 ```
+
+### Solution
+My solution Big(O): O(n)
+
+Explain: Make map\[int]int to contains map\[key] of int value that we found. Then we need to iterate through input and set int found = 1 by default check now we check it from map if we contain key we add pairs, found by get value from map\[key]. After we set found to map\[key] and continue it to n

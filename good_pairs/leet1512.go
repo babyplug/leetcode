@@ -25,15 +25,20 @@ func Solved() {
 }
 
 func numIdenticalPairs(nums []int) int {
-	goodPairs := 0
+	pairs := 0
+	m := make(map[int]int)
 
-	for i, _ := range nums {
-		for j := 1; j < len(nums); j++ {
-			if nums[i] == nums[j] && i < j {
-				goodPairs = goodPairs + 1
-			}
+	for _, v := range nums {
+		found := 1
+
+		mv, mk := m[v]
+		if mk {
+			pairs += mv
+			found += mv
 		}
+
+		m[v] = found
 	}
 
-	return goodPairs
+	return pairs
 }
