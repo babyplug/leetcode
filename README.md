@@ -44,7 +44,7 @@ Kid 5 has 3 candies and if he or she receives at least 2 extra candies will have
 ```
 
 ### Solution
-My solution Big(O): O(2n)
+My solution Big(O): O(n)
 
 Explain: We need to find max_number in candies array input and now we just need n loop through array for check candy of each kid has greater than or equal to max_number or not and set it to array of output.
 
