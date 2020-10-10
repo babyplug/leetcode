@@ -67,3 +67,27 @@ Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 My solution Big(O): O(n)
 
 Explain: Make map\[int]int to contains map\[key] of int value that we found. Then we need to iterate through input and set int found = 1 by default check now we check it from map if we contain key we add pairs, found by get value from map\[key]. After we set found to map\[key] and continue it to n
+
+## #771. Jewels and Stones
+You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+Example 1:
+```
+Input: J = "aA", S = "aAAbbbb"
+Output: 3
+Example 2:
+```
+Example 2:
+```
+Input: J = "z", S = "ZZ"
+Output: 0
+```
+
+Note:
+  - ```S``` and ```J``` will consist of letters and have length at most 50.
+  - The characters in J are distinct.
+  
+### Solution
+Explain: defined count for sum of result and split ```S``` to map\["string"]int, then iterate through ```J``` and check it is key from ``` map[ S[n] ]``` if it true and plus count by 1 after iterate just return sum of count.
