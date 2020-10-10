@@ -3,10 +3,11 @@ Solved problem from [leetcode](https://www.leetcode.com)
 
 ## #1480 Running Sum of 1d Array
 ### description
-Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+Given an array nums. We define a running sum of an array as runningSum\[i] = sum(nums\[0]…nums\[i]).
 
 Return the running sum of nums.
-Example 1:
+
+**Example 1:**
 ```
 Input: nums = [1,2,3,4]
 Output: [1,3,6,10]
@@ -31,7 +32,7 @@ Given the array candies and the integer extraCandies, where candies[i] represent
 
 For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
 
-Example 1:
+**Example 1:**
 ```
 Input: candies = [2,3,5,1,3], extraCandies = 3
 Output: [true,true,true,false,true] 
@@ -55,8 +56,7 @@ A pair (i, j) is called good if nums\[i] == nums\[j] and i < j.
 
 Return the number of good pairs.
 
-Example 1:
-
+**Example 1:**
 ```
 Input: nums = [1, 2, 3, 1, 1, 3]
 Output: 4
@@ -73,13 +73,13 @@ You're given strings J representing the types of stones that are jewels, and S r
 
 The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
-Example 1:
+**Example 1:**
 ```
 Input: J = "aA", S = "aAAbbbb"
 Output: 3
 Example 2:
 ```
-Example 2:
+**Example 2:**
 ```
 Input: J = "z", S = "ZZ"
 Output: 0
@@ -91,3 +91,32 @@ Note:
   
 ### Solution
 Explain: defined count for sum of result and split ```S``` to map\["string"]int, then iterate through ```J``` and check it is key from ``` map[ S[n] ]``` if it true and plus count by 1 after iterate just return sum of count.
+
+## #1342. Number of Steps to Reduce a Number to Zero
+Given a non-negative integer num, return the number of steps to reduce it to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+
+**Example 1:**
+```
+Input: num = 14
+Output: 6
+Explanation: 
+Step 1) 14 is even; divide by 2 and obtain 7. 
+Step 2) 7 is odd; subtract 1 and obtain 6.
+Step 3) 6 is even; divide by 2 and obtain 3. 
+Step 4) 3 is odd; subtract 1 and obtain 2. 
+Step 5) 2 is even; divide by 2 and obtain 1. 
+Step 6) 1 is odd; subtract 1 and obtain 0.
+```
+**Example 2:**
+```
+Input: num = 8
+Output: 4
+Explanation: 
+Step 1) 8 is even; divide by 2 and obtain 4. 
+Step 2) 4 is even; divide by 2 and obtain 2. 
+Step 3) 2 is even; divide by 2 and obtain 1. 
+Step 4) 1 is odd; subtract 1 and obtain 0.
+```
+
+### Solution
+Explain: while num > 0 and check if num % 2 equal 0 then divide it by 2, otherwise subtract it by 1.
